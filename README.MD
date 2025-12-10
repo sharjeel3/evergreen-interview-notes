@@ -2,7 +2,7 @@
 
 A public, evergreen repository for **refreshing core concepts**, **learning new topics**, and **preparing for interviews**.
 
-This repo is organised by technology and each topic is written as a short, focused Markdown lesson.
+This repo is organised by technology and each topic is written as a focused and structured Markdown lesson.
 
 > Goal: **Fast refresh, deep understanding, and reusable notes** you can scan the night before an interview or when jumping back into a stack.
 
@@ -41,16 +41,20 @@ This repo is organised by technology and each topic is written as a short, focus
 
 Every lesson follows a simple, repeatable structure:
 
-- **Why it matters (especially in interviews)**
+- **Why this matters (especially in interviews)**
 - **Core ideas and mental models**
 - **Code / config examples**
 - **Common pitfalls & FAQ**
 - **Quick self-check questions**
 - **Further practice ideas**
 
-This keeps notes short, scannable, and easy to expand with Copilot.
+See `sample-lesson.md` for a sample lesson.
 
-See `sample-lesson.md` for a sample.
+### Lesson details
+
+#### Why this matters
+
+Provide depth and include necessary explanations.
 
 ---
 

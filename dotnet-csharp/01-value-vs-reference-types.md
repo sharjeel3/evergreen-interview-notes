@@ -7,15 +7,28 @@
 
 ## Why this matters
 
-This is **the #1 most common C# interview question**.
+This is **the #1 most common C# interview question** because it reveals whether you understand the fundamental architecture of the .NET runtime.
 
-Understanding value vs reference types is essential because it affects:
-- How data is stored (stack vs heap)
-- How data is passed to methods (copy vs reference)
-- Performance characteristics
-- When boxing/unboxing occurs
+Understanding value vs reference types is essential because:
 
-Interviewers use this to assess if you understand how .NET actually works under the hood.
+**Memory implications:** Every time you create an object, pass a parameter, or return a value, the runtime makes decisions about where to allocate memory (stack vs heap). Understanding this distinction helps you:
+- Debug mysterious bugs where changes to variables don't persist
+- Predict and optimize memory usage patterns
+- Avoid performance pitfalls in tight loops
+- Design efficient data structures
+
+**Performance impact:** The difference between stack and heap allocation can be 10-100x in performance. Stack allocation is nearly free (just moving a pointer), while heap allocation requires coordination with the garbage collector, potential memory zeroing, and eventual cleanup.
+
+**Boxing penalties:** Without understanding this concept, you might unknowingly write code that boxes value types thousands of times per second, creating massive GC pressure and degrading application performance by orders of magnitude.
+
+**Interview assessment:** When interviewers ask about value vs reference types, they're really testing:
+- Do you understand memory management fundamentals?
+- Can you explain complex concepts clearly?
+- Do you know when to use structs vs classes?
+- Can you predict how code will behave at runtime?
+- Do you understand the performance implications of your design choices?
+
+This knowledge separates developers who just write code from engineers who understand how their code executes on the machine.
 
 ---
 

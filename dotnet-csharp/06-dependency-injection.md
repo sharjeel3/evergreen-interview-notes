@@ -7,16 +7,68 @@
 
 ## Why this matters
 
-Dependency Injection is **fundamental to modern .NET development**.
+Dependency Injection isn't just a pattern—it's **the architectural foundation of modern .NET applications**. ASP.NET Core, Entity Framework, and most production .NET systems are built entirely around DI. Not understanding it means you can't effectively work in professional .NET environments.
 
-Interviewers test:
-- Understanding of IoC (Inversion of Control) principle
-- Service lifetimes (Transient, Scoped, Singleton)
-- Constructor vs property injection
-- When and why to use DI
-- Built-in DI container vs third-party containers
+**Testability revolution:** Before DI became mainstream, testing was painful:
+- Classes directly instantiated their dependencies (tight coupling)
+- Mocking dependencies required complex workarounds or test frameworks
+- Integration tests were slow and fragile
+- Test coverage was difficult to achieve
 
-DI is critical for testability, maintainability, and loose coupling.
+With DI, testing becomes straightforward—you simply inject mock implementations. This difference is transformative: companies can achieve 80%+ test coverage with DI, vs struggling to reach 30% without it. Better tests mean fewer production bugs, faster deployment cycles, and higher confidence in changes.
+
+**Loose coupling and maintainability:** In large codebases (100K+ lines), tight coupling becomes a nightmare:
+- Changing one class breaks dozens of others
+- Refactoring is risky and time-consuming
+- Adding features requires touching many files
+- Understanding code dependencies is difficult
+
+DI inverts these dependencies, making code modular and maintainable. When you need to swap logging implementations, change databases, or replace external APIs, DI lets you make the change in one place (the registration) rather than hunting through the codebase.
+
+**Service lifetime mastery:** Understanding Transient, Scoped, and Singleton lifetimes is critical because getting it wrong causes:
+- **Memory leaks:** Singleton capturing Scoped service keeps it alive forever (captive dependency)
+- **Concurrency bugs:** Sharing Transient state across requests causes race conditions
+- **Database errors:** Incorrect DbContext lifetime causes "already tracking entity" errors
+- **Performance issues:** Creating expensive services too frequently (should be Singleton)
+
+These bugs are subtle and often only appear in production under load, making them particularly dangerous.
+
+**ASP.NET Core architecture:** The entire ASP.NET Core framework is designed around DI:
+- Controllers get dependencies injected
+- Middleware uses DI for services
+- Configuration is injected via IOptions<T>
+- Logging, authentication, authorization all use DI
+
+Not understanding DI means you can't follow the framework's conventions or leverage its full power. You'll write code that fights the framework instead of working with it.
+
+**Cross-cutting concerns:** DI enables elegant solutions to cross-cutting concerns:
+- Logging: Inject ILogger<T> everywhere it's needed
+- Caching: Inject IMemoryCache or IDistributedCache
+- Authentication: Inject IHttpContextAccessor or custom auth services
+- Configuration: Inject IOptions<T> for strongly-typed settings
+- Feature flags: Inject feature flag services
+
+Without DI, these concerns get scattered throughout the codebase in inconsistent ways.
+
+**Production patterns:** Professional .NET development patterns require DI:
+- Repository pattern for data access
+- Unit of Work pattern for transactions
+- Strategy pattern for algorithms
+- Decorator pattern for cross-cutting concerns
+- Factory pattern for dynamic object creation
+
+All of these patterns are vastly simpler with DI than without it.
+
+**Interview expectations:** When interviewers ask about DI, they're evaluating:
+- Can you design maintainable, testable architectures?
+- Do you understand service lifetimes and their implications?
+- Can you debug common DI problems (circular dependencies, captive dependencies)?
+- Can you work effectively in ASP.NET Core?
+- Do you know when to use interfaces vs concrete types?
+- Can you explain IoC principles and their benefits?
+- Do you understand the trade-offs of different DI containers?
+
+DI knowledge is often a litmus test: developers who understand it can work on enterprise codebases; those who don't struggle with modern .NET development. It's not just about knowing the syntax—it's about understanding how to architect maintainable, testable, professional software systems.
 
 ---
 

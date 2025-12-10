@@ -7,15 +7,33 @@
 
 ## Why this matters
 
-Exception handling is **critical for production code** and a common interview topic.
+Exception handling separates **hobbyist code from production-ready software**. It's one of the most visible indicators of code quality and engineering maturity.
 
-Interviewers assess:
-- Do you understand when to use exceptions vs return codes?
-- Do you know the performance cost of exceptions?
-- Can you write defensive code without over-catching?
-- Do you understand finally blocks and IDisposable?
+**Production stability:** In production systems serving thousands or millions of users, unhandled exceptions can:
+- Crash entire applications or services
+- Corrupt data mid-transaction
+- Leak sensitive information through error messages
+- Create cascading failures across distributed systems
+- Cost companies thousands of dollars per minute in downtime
 
-Poor exception handling crashes apps, leaks resources, and hides bugs.
+A single missing try-catch around a file operation can bring down a critical service. Understanding proper exception handling is literally the difference between a stable production system and one that fails unpredictably.
+
+**Resource management:** Exceptions that occur between acquiring and releasing resources (file handles, database connections, network sockets) cause resource leaks. In high-throughput systems, these leaks can exhaust available resources in minutes, requiring application restarts. The `IDisposable` pattern and `using` statements are your primary defense against this entire class of production issues.
+
+**Performance implications:** Throwing and catching exceptions is expensive (1000x slower than normal code paths). Using exceptions for control flow in tight loops can destroy application performance. Understanding when exceptions are appropriate vs using result types or Try* patterns is crucial for writing performant code.
+
+**Debugging and observability:** Proper exception handling preserves stack traces and context, making production issues debuggable. Swallowing exceptions or using `throw ex` destroys diagnostic information, making bugs nearly impossible to track down in production. Every lost stack trace could mean hours or days of debugging.
+
+**Security considerations:** Improper exception handling can leak sensitive information (connection strings, internal paths, user data) through error messages. It can also create denial-of-service vulnerabilities if exceptions cause excessive logging or resource consumption.
+
+**Interview assessment:** When interviewers ask about exception handling, they're evaluating:
+- Do you write defensive, production-ready code?
+- Can you design error handling strategies for distributed systems?
+- Do you understand the trade-offs between exceptions and result types?
+- Can you prevent resource leaks and maintain application stability?
+- Do you know how to preserve diagnostic information for debugging?
+
+This knowledge demonstrates that you understand the full lifecycle of software—from development through production operations and incident response.
 
 ---
 
