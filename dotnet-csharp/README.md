@@ -41,6 +41,10 @@ Practical skills used daily in production code.
 | [05](05-async-await-and-tpl.md) | **Async/Await & TPL** | Asynchronous programming, Task, deadlocks, ConfigureAwait |
 | [06](06-dependency-injection.md) | **Dependency Injection** | IoC, service lifetimes, testability |
 | [13](13-threading-and-synchronization.md) | **Threading & Synchronization** | Threads, locks, race conditions, thread safety |
+| [14](14-parallel-programming.md) | **Parallel Programming** | Parallel.For, PLINQ, partitioning, CPU-bound work |
+| [15](15-events-delegates-and-patterns.md) | **Events & Delegates** | Event pattern, multicast delegates, memory leaks, observer |
+| [16](16-testing-and-testability.md) | **Testing & Testability** | Unit tests, mocking, TDD, integration tests, xUnit |
+| [17](17-configuration-and-options-pattern.md) | **Configuration & Options** | appsettings, IOptions, User Secrets, Key Vault |
 
 ---
 
@@ -68,17 +72,17 @@ Topics that separate senior engineers from juniors in interviews.
 ## 🗺 Suggested Learning Paths
 
 ### Path 1: Complete Beginner
-Follow lessons in order: 01 → 02 → 03 → 10 → 11 → 12 → 04 → 05 → 06 → 13
+Follow lessons in order: 01 → 02 → 03 → 10 → 11 → 12 → 04 → 05 → 06 → 13 → 14 → 15 → 16 → 17
 
 ### Path 2: Interview Prep (1-2 weeks out)
 1. **Fundamentals refresh** (10-12) — .NET runtime, strings, OOP
 2. **Scan basics** (01-03) for any gaps
-3. **Deep dive intermediate** (04-06, 13) — LINQ, async, DI, threading
+3. **Deep dive intermediate** (04-06, 13-17) — LINQ, async, DI, threading, parallel, events, testing, config
 4. **Read advanced topics** (07-09, 18) for talking points
 5. **Drill the interview checklist** (99)
 
 ### Path 3: Quick Refresh (night before)
-1. Read "Why this matters" + "Core Ideas" in each lesson (focus on 04-09, 13, 18)
+1. Read "Why this matters" + "Core Ideas" in each lesson (focus on 04-09, 13-18)
 2. Review "Common Pitfalls" sections
 3. Go through interview checklist (99)
 
