@@ -47,6 +47,9 @@ Practical skills used daily in production code.
 | [17](17-configuration-and-options-pattern.md) | **Configuration & Options** | appsettings, IOptions, User Secrets, Key Vault |
 | [19](19-design-patterns-in-csharp.md) | **Design Patterns** | Singleton, Factory, Repository, Strategy, Observer, Decorator |
 | [21](21-nullable-types-and-modern-csharp.md) | **Nullable & Modern C#** | Nullable reference types, records, init-only, pattern matching |
+| [22](22-file-io-and-serialization.md) | **File I/O & Serialization** | Streams, async file operations, JSON/XML, System.Text.Json |
+| [23](23-middleware-and-http-pipeline.md) | **Middleware & HTTP Pipeline** | ASP.NET Core middleware, request/response flow, custom middleware |
+| [24](24-logging-and-observability.md) | **Logging & Observability** | ILogger, structured logging, Application Insights, correlation IDs |
 
 ---
 
@@ -75,17 +78,17 @@ Topics that separate senior engineers from juniors in interviews.
 ## 🗺 Suggested Learning Paths
 
 ### Path 1: Complete Beginner
-Follow lessons in order: 01 → 02 → 03 → 10 → 11 → 12 → 04 → 05 → 06 → 13 → 14 → 15 → 16 → 17 → 19 → 21
+Follow lessons in order: 01 → 02 → 03 → 10 → 11 → 12 → 04 → 05 → 06 → 13 → 14 → 15 → 16 → 17 → 19 → 21 → 22 → 23 → 24
 
 ### Path 2: Interview Prep (1-2 weeks out)
 1. **Fundamentals refresh** (10-12, 21) — .NET runtime, strings, OOP, modern C#
 2. **Scan basics** (01-03) for any gaps
-3. **Deep dive intermediate** (04-06, 13-17, 19) — LINQ, async, DI, threading, parallel, events, testing, config, patterns
+3. **Deep dive intermediate** (04-06, 13-17, 19, 21-24) — LINQ, async, DI, threading, parallel, events, testing, config, patterns, file I/O, middleware, logging
 4. **Read advanced topics** (07-09, 18, 20) for talking points
 5. **Drill the interview checklist** (99)
 
 ### Path 3: Quick Refresh (night before)
-1. Read "Why this matters" + "Core Ideas" in each lesson (focus on 04-09, 13-21)
+1. Read "Why this matters" + "Core Ideas" in each lesson (focus on 04-09, 13-24)
 2. Review "Common Pitfalls" sections
 3. Go through interview checklist (99)
 
