@@ -46,6 +46,7 @@ Practical skills used daily in production React applications.
 | [13](13-error-boundaries.md) | **Error Boundaries** | Error handling, fallback UI, logging errors |
 | [14](14-refs-and-dom.md) | **Refs & DOM Access** | useRef, forwardRef, when to access DOM directly |
 | [15](15-component-composition.md) | **Component Composition** | children prop, render props, HOCs vs hooks |
+| [16](16-portals-and-rendering-patterns.md) | **Portals & Rendering Patterns** | ReactDOM.createPortal, modals, tooltips, escape hatches |
 
 ---
 
@@ -55,11 +56,29 @@ Advanced patterns, architecture, and production concerns.
 
 | # | Topic | Why It Matters |
 |---|-------|----------------|
-| [16](16-state-management-patterns.md) | **State Management Patterns** | Redux, Zustand, Jotai, when to use what |
-| [17](17-testing-react-applications.md) | **Testing React Applications** | Jest, React Testing Library, integration tests |
-| [18](18-server-side-rendering.md) | **Server-Side Rendering** | Next.js, SSR vs SSG vs CSR, hydration |
+| [17](17-state-management-patterns.md) | **State Management Patterns** | Redux, Zustand, Jotai, Recoil, when to use what |
+| [18](18-testing-react-applications.md) | **Testing React Applications** | Jest, React Testing Library, unit & integration tests |
 | [19](19-typescript-with-react.md) | **TypeScript with React** | Typing props, hooks, generics, common patterns |
-| [20](20-react-internals.md) | **React Internals** | Fiber, reconciliation, concurrent rendering, scheduler |
+| [20](20-advanced-hooks.md) | **Advanced Hooks** | useReducer, useImperativeHandle, useLayoutEffect, useDebugValue |
+
+---
+
+### ⚡ React 18/19+ Features
+
+Cutting-edge features and modern React development.
+
+| # | Topic | Why It Matters |
+|---|-------|----------------|
+| [21](21-concurrent-features.md) | **Concurrent Features** | Concurrent rendering, transitions, useTransition, startTransition |
+| [22](22-react-suspense.md) | **React Suspense** | Suspense for data fetching, lazy loading, boundaries |
+| [23](23-react-compiler.md) | **React Compiler (React 19+)** | Automatic memoization, forget.js, optimization without useMemo |
+| [24](24-server-components.md) | **Server Components** | RSC architecture, server vs client components, streaming |
+| [25](25-server-actions.md) | **Server Actions** | Form actions, mutations, progressive enhancement |
+| [26](26-modern-react-patterns.md) | **Modern React Patterns (2024+)** | use hook, Actions, Optimistic UI, Form status |
+| [27](27-react-apis-reference.md) | **React APIs Reference** | createContext, forwardRef, memo, lazy, Suspense, StrictMode |
+| [28](28-react-internals.md) | **React Internals** | Fiber, reconciliation, scheduler, work loop |
+| [29](29-next-js-and-frameworks.md) | **Next.js & React Frameworks** | App Router, SSR, SSG, ISR, middleware, deployment |
+| [30](30-performance-and-production.md) | **Performance & Production** | Bundle optimization, code splitting, caching, monitoring |
 
 ---
 
@@ -77,35 +96,75 @@ Advanced patterns, architecture, and production concerns.
 Focus on fundamentals and commonly asked questions:
 1. Lessons 01-05 (Fundamentals)
 2. Lessons 06, 09, 11 (useEffect, Performance, Keys)
-3. Review `99-interview-checklist.md`
+3. Lesson 20 (Advanced Hooks - useReducer)
+4. Review `99-interview-checklist.md`
 
 ### Path 2: Production-Ready (1-2 weeks)
 Build strong practical skills:
 1. All Fundamentals (01-05)
-2. All Intermediate (06-15)
-3. Lessons 16, 17, 19 (State management, Testing, TypeScript)
+2. All Intermediate (06-16)
+3. Lessons 17, 18, 19 (State management, Testing, TypeScript)
+4. Lesson 29 (Next.js basics)
 
-### Path 3: Deep Mastery (1 month)
+### Path 3: Modern React Mastery (2-4 weeks)
+Focus on React 18/19+ features:
+1. Fundamentals (01-05)
+2. Core Intermediate (06-12)
+3. Advanced Core (17-20)
+4. Concurrent Features (21)
+5. React Suspense (22)
+6. React Compiler (23)
+7. Server Components & Actions (24-25)
+8. Modern Patterns (26)
+
+### Path 4: Deep Mastery (1-2 months)
 Complete understanding of React:
-- Work through all lessons in order
-- Build projects after each section
+- Work through lessons 01-20 thoroughly
+- Deep dive into React 18/19+ features (21-26)
+- Master React internals (28)
+- Master Next.js and production deployment (29-30)
+- Build real-world projects applying all concepts
 - Read official React docs alongside
 
 ---
 
 ## 💡 Tips for Using These Lessons
 
+- **Stay current**: React 18/19 introduced major changes (Suspense, Server Components, Compiler)
 - **Code along**: Don't just read—type out examples
 - **Break things**: Change code and observe what happens
 - **Ask "why"**: Understand the reasoning behind patterns
 - **Practice explaining**: Teach concepts back in your own words
 - **Check yourself**: Use the self-check questions at the end of each lesson
+- **Build projects**: Apply concepts in real applications
+
+---
+
+## 🆕 What's New in Modern React
+
+### React 19 (2024)
+- **React Compiler**: Automatic memoization without useMemo/useCallback
+- **Actions**: Built-in support for async form handling
+- **use() Hook**: Read promises and context in render
+- **Optimistic Updates**: Built-in UI patterns for pending states
+- **Server Actions**: Direct server function calls from client
+
+### React 18 (2022)
+- **Concurrent Rendering**: Non-blocking rendering with priorities
+- **Transitions**: Mark updates as non-urgent (useTransition)
+- **Suspense for Data Fetching**: Beyond lazy loading
+- **Automatic Batching**: All updates batched, not just events
+- **Streaming SSR**: Improved server-side rendering performance
 
 ---
 
 ## 📖 Additional Resources
 
 - [Official React Docs](https://react.dev)
+- [React 19 Release Notes](https://react.dev/blog/2024/12/05/react-19)
+- [React Compiler Documentation](https://react.dev/learn/react-compiler)
 - [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
 - [React DevTools](https://react.dev/learn/react-developer-tools)
+- [Next.js Documentation](https://nextjs.org/docs)
 - [Kent C. Dodds Blog](https://kentcdodds.com/blog)
+- [Dan Abramov's Overreacted](https://overreacted.io/)
