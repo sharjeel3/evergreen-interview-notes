@@ -7,14 +7,28 @@
 
 ## Why this matters
 
-JSX is React's signature syntax. In interviews, you need to:
+JSX is React's signature syntax and one of the first concepts interviewers assess to gauge your React fundamentals. A solid understanding of JSX demonstrates that you grasp React's declarative programming model and aren't just copying code without understanding what's happening under the hood.
 
-- explain what JSX actually *is* (not HTML!)
-- understand how it transforms to JavaScript
-- know why React uses a Virtual DOM
-- debug common JSX syntax errors
+**Why interviewers care:**
+- JSX reveals whether you understand React's compilation process and how your code actually executes
+- It's the foundation for explaining React's rendering model, Virtual DOM, and reconciliation
+- Common JSX bugs (like using `class` instead of `className`) indicate shallow understanding
+- Senior engineers need to explain JSX to junior developers and debug JSX-related issues
 
-**Interview red flag:** saying "JSX is HTML in JavaScript"
+**Real-world implications:**
+- **Debugging:** When build errors mention `React.createElement`, you need to understand the JSX → JS transformation
+- **Performance:** Understanding that JSX creates objects helps you reason about when React re-renders
+- **Tooling:** Knowing JSX is JavaScript enables you to use TypeScript, linters, and other tools effectively
+- **Architecture:** JSX influences how you structure components and think about composition
+
+**What you must know:**
+- JSX is syntactic sugar for `React.createElement()` calls, not HTML
+- How JSX transforms to JavaScript (Babel's role)
+- Why React uses a Virtual DOM and how it improves performance
+- JSX syntax rules and common errors
+- The difference between React elements, components, and DOM nodes
+
+**Interview red flag:** Saying "JSX is HTML in JavaScript" shows you haven't understood React's fundamental architecture. JSX produces JavaScript objects, not HTML strings.
 
 ---
 

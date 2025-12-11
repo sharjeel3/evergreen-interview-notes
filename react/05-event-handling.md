@@ -7,14 +7,40 @@
 
 ## Why this matters
 
-Event handling is how users interact with your app. In interviews, you must:
+Event handling is the bridge between user interactions and your application's logic—without it, React apps would be static and useless. Interviewers assess event handling to understand your grasp of React's event system architecture, performance implications, and ability to avoid common pitfalls that plague production applications.
 
-- understand React's **Synthetic Event** system
-- know how to handle events without binding issues
-- prevent common event bugs (memory leaks, performance issues)
-- explain event delegation
+**Why interviewers care:**
+- Event handling questions reveal understanding of React's abstraction layer over native browser APIs
+- Performance issues often stem from improper event handler patterns (creating functions in render)
+- Memory leaks from unremoved event listeners are a common production bug
+- Senior developers need to explain why React uses SyntheticEvent vs native events
+- Event handling patterns affect component reusability and testing complexity
 
-**Interview red flag:** binding `this` in function components or creating functions in render
+**Real-world implications:**
+- **Cross-browser compatibility:** React's SyntheticEvent normalizes browser differences (critical for production apps)
+- **Performance:** Creating inline functions in render can cause unnecessary re-renders in memoized components
+- **Memory management:** Improper event listener cleanup causes memory leaks in long-running applications
+- **User experience:** Event handling bugs (double-submission, race conditions) directly impact users
+- **Accessibility:** Proper event handling is essential for keyboard navigation and screen readers
+- **Form handling:** Most apps heavily rely on input events for forms, search, and real-time features
+
+**React's event system advantages:**
+- **Normalization:** Consistent behavior across all browsers (IE, Safari, Chrome, Firefox)
+- **Performance:** Event delegation at root level (one listener handles all events)
+- **Features:** Additional methods and properties beyond native events
+- **Integration:** Events work seamlessly with React's rendering cycle
+
+**What you must know:**
+- React wraps native events in SyntheticEvent objects for consistency
+- Event names are camelCase (`onClick`, not `onclick`)
+- Pass function references, not calls (`onClick={fn}` not `onClick={fn()}`)
+- How to pass arguments to event handlers properly
+- `preventDefault()` and `stopPropagation()` usage
+- React's automatic event delegation (efficient, but understanding matters)
+- Performance implications of inline vs stable event handlers
+- When to use `useCallback` for event handlers
+
+**Interview red flag:** Trying to bind `this` in function components (shows confusion between class and function components) or consistently creating functions in render (performance anti-pattern) indicates lack of understanding about React's rendering model.
 
 ---
 

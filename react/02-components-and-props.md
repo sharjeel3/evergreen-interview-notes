@@ -7,14 +7,30 @@
 
 ## Why this matters
 
-Components are the building blocks of React. In interviews, you must:
+Components are React's fundamental building blocks, and understanding them deeply is non-negotiable for any React position. Interviewers use component-related questions to assess your grasp of React's architecture, data flow patterns, and ability to build maintainable applications.
 
-- explain the difference between function and class components
-- understand one-way data flow via props
-- know component composition patterns
-- recognize props vs state
+**Why interviewers care:**
+- Component design reveals your ability to create reusable, maintainable code
+- Props flow demonstrates understanding of React's unidirectional data flow philosophy
+- Composition patterns show whether you can build complex UIs without creating spaghetti code
+- The props vs state distinction is fundamental to managing application state correctly
 
-**Interview red flag:** modifying props directly
+**Real-world implications:**
+- **Maintainability:** Well-designed components are easier to test, debug, and modify
+- **Team collaboration:** Clear component boundaries help teams work in parallel without conflicts
+- **Performance:** Understanding props enables you to optimize re-renders with React.memo
+- **Scalability:** Composition patterns (vs inheritance) allow applications to grow without architectural rewrites
+- **Code reuse:** Properly designed components can be shared across projects and teams
+
+**What you must know:**
+- Function components are the modern standard; class components are legacy
+- Props are immutable and flow one-way (parent → child)
+- How to compose components using the `children` prop
+- When to use props vs state for data management
+- Common patterns: container/presentational, compound components, render props
+- Why React favors composition over inheritance
+
+**Interview red flag:** Mutating props directly (`props.name = "new"`) reveals a fundamental misunderstanding of React's data flow and can cause subtle bugs that are hard to debug.
 
 ---
 

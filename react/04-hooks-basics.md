@@ -7,14 +7,37 @@
 
 ## Why this matters
 
-Hooks revolutionized React. In interviews, you must:
+Hooks fundamentally changed how React applications are built (React 16.8+) and represent the biggest paradigm shift in React's history. Understanding hooks deeply is essential because they're now the standard way to write React, and interviewers specifically probe your understanding of *why* they exist, not just *how* to use them.
 
-- explain **why hooks exist** (not just how to use them)
-- know the **Rules of Hooks**
-- understand the most common hooks
-- recognize when to create custom hooks
+**Why interviewers care:**
+- Hooks questions separate candidates who've adapted to modern React from those stuck in legacy patterns
+- The Rules of Hooks test fundamental understanding—you can't fake comprehension here
+- Hook-related bugs (stale closures, missing dependencies) are extremely common and costly
+- Custom hooks reveal your ability to extract reusable logic and write clean abstractions
+- Understanding hooks demonstrates knowledge of React's internal state management and rendering model
 
-**Interview red flag:** breaking Rules of Hooks or not knowing why they exist
+**Real-world implications:**
+- **Code reuse:** Hooks enable sharing stateful logic without HOCs or render props (eliminates wrapper hell)
+- **Simplicity:** Function components with hooks are simpler than class components with lifecycle methods
+- **Bundle size:** Hooks produce smaller bundles (functions compress better than classes)
+- **Debugging:** Understanding hooks helps you debug common issues like stale closures and infinite loops
+- **Team standards:** Modern React teams exclusively use hooks—class components are legacy code
+- **Testing:** Hooks make components easier to test (no `this` binding, simpler mocking)
+
+**Historical context:**
+- **Before hooks:** Stateful logic required class components, leading to component wrapper hell (HOCs, render props)
+- **The problem:** No good way to reuse stateful logic between components without complex patterns
+- **The solution:** Hooks let you use state and effects in function components and extract/share custom hooks
+
+**What you must know:**
+- **Rules of Hooks:** Only call at top level, only in React functions (components/custom hooks)
+- *Why* these rules exist (React tracks hooks by call order)
+- Common hooks: useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef
+- How to create custom hooks for reusable logic
+- Dependency arrays and their impact on behavior
+- The mental model: hooks "hook into" React features from function components
+
+**Interview red flag:** Breaking Rules of Hooks (conditional hook calls, hooks in loops) or not knowing *why* hooks replaced class components shows surface-level understanding. Interviewers want to know you understand the architecture, not just the syntax.
 
 ---
 

@@ -7,13 +7,57 @@
 
 ## Why this matters
 
-Performance optimization is a favorite interview topic because it tests:
+Performance optimization is a critical interview topic because it tests whether you understand React's internals, can identify real bottlenecks, and know when optimization helps vs. when it just adds complexity. This topic separates junior developers who optimize everything from experienced engineers who measure first and optimize strategically.
 
-- understanding of React's rendering behavior
-- when and why to optimize
-- trade-offs between optimization and code complexity
+**Why interviewers care:**
+- Performance questions assess understanding of React's rendering lifecycle and reconciliation algorithm
+- Optimization reveals whether you can identify real performance problems vs. premature optimization
+- Memoization techniques (memo, useMemo, useCallback) are commonly misused—interviewers want to see you know when they help
+- Senior developers must make architectural decisions that affect performance across large applications
+- Understanding re-renders shows you can debug slow components and build scalable UIs
 
-**Interview red flag:** premature optimization or not knowing when React re-renders
+**Real-world implications:**
+- **User experience:** Slow apps frustrate users and increase bounce rates—performance directly impacts business metrics
+- **Mobile devices:** Performance issues are amplified on lower-powered devices (critical for global apps)
+- **Complex UIs:** Large lists, tables, and dashboards become unusable without proper optimization
+- **Real-time features:** Chat, collaboration tools, and live updates need careful optimization to stay responsive
+- **Cost:** Poor performance leads to high server costs (SSR), increased bandwidth, and support tickets
+- **Technical debt:** Premature optimization creates complex, hard-to-maintain code—measure first!
+
+**Common performance problems:**
+- Rendering 10,000+ list items without virtualization (page freezes)
+- Missing keys on list items (inefficient reconciliation)
+- Creating objects/functions in render passed to memoized children (breaks memoization)
+- Unnecessary re-renders cascading through component tree
+- Expensive calculations on every render (should use useMemo)
+- Large bundles loading upfront (need code splitting)
+- Not cleaning up effects (memory leaks over time)
+
+**When optimization actually matters:**
+- Components that render frequently (real-time updates, animations)
+- Large lists/tables (1000+ items)
+- Expensive calculations (filtering, sorting, complex math)
+- Deeply nested component trees
+- Mobile or low-powered devices
+
+**When NOT to optimize:**
+- Simple components that render fast already
+- Components that rarely re-render
+- Before measuring with profiler
+- At the expense of code clarity
+
+**What you must know:**
+- **When React re-renders:** State/props/context change, parent re-renders
+- **React.memo:** Shallow prop comparison to skip re-renders
+- **useMemo:** Cache expensive calculations
+- **useCallback:** Stabilize function references
+- **Code splitting:** React.lazy + Suspense for large components
+- **Virtualization:** Render only visible items (react-window)
+- **Keys:** Help React identify changed items efficiently
+- **Profiling:** React DevTools Profiler to measure actual performance
+- **Trade-offs:** Memoization has memory and comparison costs
+
+**Interview red flag:** Wrapping everything in React.memo/useMemo/useCallback without measuring shows premature optimization. Equally bad: not knowing when React re-renders or how to identify performance issues with profiling tools.
 
 ---
 
