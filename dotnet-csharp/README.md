@@ -45,6 +45,8 @@ Practical skills used daily in production code.
 | [15](15-events-delegates-and-patterns.md) | **Events & Delegates** | Event pattern, multicast delegates, memory leaks, observer |
 | [16](16-testing-and-testability.md) | **Testing & Testability** | Unit tests, mocking, TDD, integration tests, xUnit |
 | [17](17-configuration-and-options-pattern.md) | **Configuration & Options** | appsettings, IOptions, User Secrets, Key Vault |
+| [19](19-design-patterns-in-csharp.md) | **Design Patterns** | Singleton, Factory, Repository, Strategy, Observer, Decorator |
+| [21](21-nullable-types-and-modern-csharp.md) | **Nullable & Modern C#** | Nullable reference types, records, init-only, pattern matching |
 
 ---
 
@@ -58,6 +60,7 @@ Topics that separate senior engineers from juniors in interviews.
 | [08](08-reflection-and-attributes.md) | **Reflection & Attributes** | Runtime type inspection, custom attributes, performance |
 | [09](09-performance-optimization.md) | **Performance Optimization** | Span\<T\>, benchmarking, profiling, common pitfalls |
 | [18](18-security-and-secure-coding.md) | **Security & Secure Coding** | SQL injection, XSS, authentication, encryption, OWASP |
+| [20](20-expression-trees-and-dynamic-code.md) | **Expression Trees** | Expression\<T\>, LINQ internals, dynamic queries, metaprogramming |
 
 ---
 
@@ -72,17 +75,17 @@ Topics that separate senior engineers from juniors in interviews.
 ## 🗺 Suggested Learning Paths
 
 ### Path 1: Complete Beginner
-Follow lessons in order: 01 → 02 → 03 → 10 → 11 → 12 → 04 → 05 → 06 → 13 → 14 → 15 → 16 → 17
+Follow lessons in order: 01 → 02 → 03 → 10 → 11 → 12 → 04 → 05 → 06 → 13 → 14 → 15 → 16 → 17 → 19 → 21
 
 ### Path 2: Interview Prep (1-2 weeks out)
-1. **Fundamentals refresh** (10-12) — .NET runtime, strings, OOP
+1. **Fundamentals refresh** (10-12, 21) — .NET runtime, strings, OOP, modern C#
 2. **Scan basics** (01-03) for any gaps
-3. **Deep dive intermediate** (04-06, 13-17) — LINQ, async, DI, threading, parallel, events, testing, config
-4. **Read advanced topics** (07-09, 18) for talking points
+3. **Deep dive intermediate** (04-06, 13-17, 19) — LINQ, async, DI, threading, parallel, events, testing, config, patterns
+4. **Read advanced topics** (07-09, 18, 20) for talking points
 5. **Drill the interview checklist** (99)
 
 ### Path 3: Quick Refresh (night before)
-1. Read "Why this matters" + "Core Ideas" in each lesson (focus on 04-09, 13-18)
+1. Read "Why this matters" + "Core Ideas" in each lesson (focus on 04-09, 13-21)
 2. Review "Common Pitfalls" sections
 3. Go through interview checklist (99)
 
