@@ -103,6 +103,30 @@
 - [ ] `componentDidCatch` and `getDerivedStateFromError`
 - [ ] Display fallback UI on error
 
+### Testing & TDD
+- [ ] **TDD cycle:** Red (write failing test) → Green (make it pass) → Refactor
+- [ ] **Unit tests:** Test individual functions/components in isolation
+- [ ] **Component tests:** Test component behavior with React Testing Library
+- [ ] **Integration tests:** Test multiple components working together
+- [ ] **E2E tests:** Test full user flows with Playwright/Cypress
+- [ ] **Tools:** Jest/Vitest, React Testing Library, Playwright, MSW
+- [ ] Test behavior, not implementation (avoid testing internals)
+- [ ] Use `screen.getByRole` for accessible queries
+- [ ] Mock API calls with MSW (Mock Service Worker)
+- [ ] Test accessibility with jest-axe
+
+### CI/CD
+- [ ] **CI:** Automated build/test on every commit
+- [ ] **CD:** Automated deployment to staging/production
+- [ ] Run tests in parallel to speed up pipelines
+- [ ] Cache dependencies (`node_modules`, build artifacts)
+- [ ] Use secrets for API keys, never commit them
+- [ ] Deploy staging → test → production
+- [ ] Implement health checks and automatic rollback
+- [ ] Monitor bundle size, fail build if exceeds limit
+- [ ] Track code coverage, enforce minimum threshold
+- [ ] **Tools:** GitHub Actions, CircleCI, GitLab CI
+
 ---
 
 ## 💬 Common Interview Questions
@@ -201,6 +225,23 @@ A: Render React on server, send HTML to client. Benefits: SEO, faster first pain
 **Q: What's hydration?**  
 A: Attaching React event handlers to server-rendered HTML. Makes static HTML interactive.
 
+**Q: How do you test React components?**  
+A: Use React Testing Library to test behavior, not implementation. Render component, interact with `userEvent`, assert with accessible queries (`getByRole`). Mock API calls with MSW. Run tests in Jest/Vitest.
+
+**Q: What's TDD and why use it?**  
+A: Test-Driven Development—write test before code. Red (failing test) → Green (make pass) → Refactor. Ensures testability, documents requirements, catches regressions.
+
+**Q: Difference between unit, integration, and E2E tests?**  
+- **Unit:** Test function/component in isolation
+- **Integration:** Test multiple components together
+- **E2E:** Test full user flow in real browser
+
+**Q: How do you set up CI/CD for a React app?**  
+A: Use GitHub Actions (or similar). On every push: lint, test, build. On merge to main: deploy to staging, run smoke tests, deploy to production. Cache dependencies, run tests in parallel, use secrets for credentials.
+
+**Q: How do you optimize slow CI pipelines?**  
+A: 1) Cache dependencies, 2) Parallelize tests using sharding, 3) Run expensive tests (E2E) only on PRs, 4) Use incremental builds, 5) Optimize Docker layers.
+
 ---
 
 ## 🐛 Common Bugs & How to Fix
@@ -275,6 +316,10 @@ A: Attaching React event handlers to server-rendered HTML. Makes static HTML int
 - [ ] Describe one-way data flow
 - [ ] Common patterns (composition, lifting state)
 - [ ] Debugging approach (DevTools, console, profiling)
+- [ ] Testing strategy (unit, component, integration, E2E)
+- [ ] TDD cycle (Red-Green-Refactor)
+- [ ] CI/CD basics (automated testing, deployment, rollback)
+- [ ] Pipeline optimization (caching, parallelization)
 
 ---
 

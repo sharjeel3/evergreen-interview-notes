@@ -75,10 +75,19 @@ Cutting-edge features and modern React development.
 | [24](24-server-components.md) | **Server Components** | RSC architecture, server vs client components, streaming |
 | [25](25-server-actions.md) | **Server Actions** | Form actions, mutations, progressive enhancement |
 | [26](26-modern-react-patterns.md) | **Modern React Patterns (2024+)** | use hook, Actions, Optimistic UI, Form status |
-| [27](27-react-apis-reference.md) | **React APIs Reference** | createContext, forwardRef, memo, lazy, Suspense, StrictMode |
-| [28](28-react-internals.md) | **React Internals** | Fiber, reconciliation, scheduler, work loop |
+| [27](27-react-redux.md) | **React Redux** | Redux fundamentals, Redux Toolkit, best practices |
 | [29](29-next-js-and-frameworks.md) | **Next.js & React Frameworks** | App Router, SSR, SSG, ISR, middleware, deployment |
-| [30](30-performance-and-production.md) | **Performance & Production** | Bundle optimization, code splitting, caching, monitoring |
+
+---
+
+### 🛠️ Testing & DevOps
+
+Professional development practices for production React applications.
+
+| # | Topic | Why It Matters |
+|---|-------|----------------|
+| [31](31-tdd-and-test-types.md) | **TDD & Test Types** | Unit, Component, Integration, E2E, Snapshot, Visual, A11y, Performance, API, State, Router, Security tests |
+| [32](32-ci-cd-pipelines.md) | **CI/CD Pipelines** | GitHub Actions, CircleCI, GitLab CI, test automation, deployment strategies, environment management |
 
 ---
 
@@ -104,7 +113,9 @@ Build strong practical skills:
 1. All Fundamentals (01-05)
 2. All Intermediate (06-16)
 3. Lessons 17, 18, 19 (State management, Testing, TypeScript)
-4. Lesson 29 (Next.js basics)
+4. Lesson 31 (TDD & Test Types)
+5. Lesson 32 (CI/CD Pipelines)
+6. Lesson 29 (Next.js basics)
 
 ### Path 3: Modern React Mastery (2-4 weeks)
 Focus on React 18/19+ features:
